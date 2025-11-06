@@ -9,7 +9,6 @@
 '''
 class Voto:
 
-    def __init__(self, idStudente, materia, valutazione):
-        self.idStudente = idStudente
+    def __init__(self,  materia, valutazione):
         self.materia = materia
         self.valutazione = valutazione

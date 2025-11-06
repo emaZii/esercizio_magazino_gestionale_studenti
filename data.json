@@ -1,5 +1,7 @@
 {
+    "id": 1,
     "name": "Emanuele",
     "age": 33,
-    "voto": 7
+    "Classroom": "1D",
+    "Italiano": 6
 }
