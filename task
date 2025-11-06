@@ -1,0 +1,93 @@
+Crea un programma in Python con lo scopo di immagazzinare delle informazioni di alcuni studenti
+di una scuola superiore. Se non viene specificato il modo in cui salvarle,
+le informazioni vanno salvate in un file di testo, scrivendo ogni oggetto in formato json.
+
+Gli studenti hanno un identificativo (1,2,3..), un nome, un’età ed una classe (es “5D”).
+
+Ogni studente ha una pagella con delle valutazioni: la valutazione ha un’identificativo,
+un voto (dall’1 al 10) ed una materia (Inglese,Italiano,Matematica,Fisica);
+la pagella contiene il riferimento allo studente (l’identificativo) ed il riferimento delle valutazioni
+delle 4 materie.
+
+Creare le classi relative a studenti, pagelle e valutazioni.
+
+Quando si avvia il programma ci chiederà di scegliere una modalità tra le seguenti:
+
+[1] Salvataggio delle informazioni e print a schermo.
+
+Questa modalità permette di creare uno studente e successivamente inserire i voti.
+
+A questo punto devo poter:
+
+- chiedere di vedere la pagella dello studente più grande/piccola
+
+- chiedere di vedere la pagella degli studenti presente una classe
+
+- chiedere di vedere i 3 studenti con la media voto in pagella più alta/bassa. (in ordine)
+
+Es.
+
+Premi 1 per creare uno studente e i voti
+
+Premi 2 per chiedere di vedere la pagella dello studente più grande o piccola
+
+Ecc
+
+*HO PREMUTO 1*
+
+Crea lo studente.
+
+Nome: input nome
+
+Eta:
+
+Classe:
+
+Riepilogo dati, è corretto? Ok
+
+Adesso quale è il voto dello studente x in materia y?
+
+...
+
+...
+
+
+
+[2] Salvataggio delle informazioni in maniera “asincrona” e print a schermo.
+
+Uguale alla modalità precedente, ma posso scegliere se creare lo studente o creare il voto da assegnare alla pagella dello studente.
+
+A questo punto devo poter:
+
+- chiedere di vedere la pagella dello studente più grande/piccola
+
+- chiedere di vedere la pagella degli studenti presente una classe
+
+- chiedere di vedere i 3 studenti con la media voto in pagella più alta/bassa. (in ordine)
+
+Es.
+
+Premi 1 per creare uno studente
+
+Premi 2 per assegnare i voti allo studente x
+
+Ecc
+
+
+
+[3] Lettura da file excel e print a schermo
+
+Creare a mano un file excel con una tabella con le seguenti colonne: nome, età, classe, VotoInglese, VotoItaliano, VotoMatematica, VotoFisica.
+
+Le informazioni vengono salvate e poi mostrate a schermo.
+
+A questo punto devo poter:
+
+- chiedere di vedere la pagella dello studente più grande/piccola
+
+- chiedere di vedere la pagella degli studenti presente una classe
+
+- chiedere di vedere i 3 studenti con la media voto in pagella più alta/bassa. (in ordine)
+
+
+
