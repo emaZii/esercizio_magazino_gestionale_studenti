@@ -6,9 +6,16 @@ import pagella as pg
 class GestioneStudenti:
 
     def caricaStudentiSulJson(self, id, nome, eta,  classroom):
-        nuovo_studente = stu.Studente(id=id, name=nome, age=eta, classroom=classroom)
+        nuovo_studente = stu.Studente(id=id, name=nome, age=eta, classroom=classroom )
         writer = json.WriteObject()
         writer.WriteOnJson(nuovo_studente)
+
+    def caricaStudentiVotieMaterieSulJson(self, id, nome, eta,  classroom, materia, voto):
+        nuovo_studente = stu.Studente(id=id, name=nome, age=eta, classroom=classroom)
+        nuovo_pagella = pg.Pagella(id=id, materia=materia, voto=voto)
+        writer = json.WriteObject()
+        writer.WriteOnJson(nuovo_studente)
+        writer.WriteOnJson(nuovo_pagella)
 
     def caricaVotieMaterielJson(self,id, materia, voto):
         materie_voti = pg.Pagella(id, materia, voto)
