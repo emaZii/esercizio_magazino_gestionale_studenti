@@ -1,11 +1,11 @@
 {
     "id": 1,
-    "nome": "ema",
-    "eta": "33",
+    "nome": "giorgio",
+    "eta": "43",
     "classe": "1d",
     "materia": {
         "id": 1,
-        "materia": "italiano",
+        "materia": "matematica",
         "valutazione": [
             5
         ]

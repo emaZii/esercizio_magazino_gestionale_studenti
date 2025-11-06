@@ -43,14 +43,17 @@
 
 import GestioneStudenti as gs
 import voto as vt
+import MyDataObj as mydataobj
 
 class Software:
 
     def __init__(self):
         self.id_counter = 0
 
-    def printPagellaOfAnClassroom(self):
-        pass
+
+    def printPagellaOfAnClassroom(self, ):
+        new_data = mydataobj.WriteObject()
+        print(new_data.ReadOnJson("classroom"))
 
     def sortPagellaLowHigh(self):
         pass
