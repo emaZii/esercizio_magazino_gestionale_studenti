@@ -3,8 +3,10 @@ import json
 class WriteObject:
 
     def WriteOnJson(self, data):
+        #serializzabile = [vars(item) for item in data]
         with open("data.json", "w") as file:
-            json.dump(data, file, indent=4)
+            for obj in data.__dict__.items():
+                json.dump(obj, file, indent=4, cls=CustomEncoder, ensure_ascii=False)
 
     def ReadOnJson(self):
         with open("data.json", "r") as file:
@@ -15,3 +17,10 @@ class WriteObject:
             data = json.load(file)
             result = data.get(key_name, default_value)
             return result
+
+
+class CustomEncoder(json.JSONEncoder):
+    def default(self, o):
+        if hasattr(o, 'to_dict'):
+            return o.to_dict()
+        return super().default(o)

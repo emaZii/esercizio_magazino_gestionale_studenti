@@ -1,21 +1,21 @@
 import studente
-import Myjson as json
+import MyDataObj as json
 import studente as stu
 import pagella as pg
 
 class GestioneStudenti:
 
     def caricaStudentiSulJson(self, id, nome, eta,  classroom):
-        nuovo_studente = stu.Studente(id=id, name=nome, age=eta, classroom=classroom )
+        nuovo_pagella = pg.Pagella(id=id, materia="", voto=0)
+        nuovo_studente = stu.Studente(id=id, name=nome, age=eta, classroom=classroom, Pagella=nuovo_pagella)
         writer = json.WriteObject()
         writer.WriteOnJson(nuovo_studente)
 
     def caricaStudentiVotieMaterieSulJson(self, id, nome, eta,  classroom, materia, voto):
-        nuovo_studente = stu.Studente(id=id, name=nome, age=eta, classroom=classroom)
         nuovo_pagella = pg.Pagella(id=id, materia=materia, voto=voto)
+        nuovo_studente = stu.Studente(id=id, name=nome, age=eta, classroom=classroom, Pagella=nuovo_pagella)
         writer = json.WriteObject()
         writer.WriteOnJson(nuovo_studente)
-        writer.WriteOnJson(nuovo_pagella)
 
     def caricaVotieMaterielJson(self,id, materia, voto):
         materie_voti = pg.Pagella(id, materia, voto)

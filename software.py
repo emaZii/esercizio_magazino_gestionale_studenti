@@ -72,10 +72,9 @@ class Software:
         classe = input("Scegli classe: ").lower()
         risposta = input("Adesso vuoi dai il voto dello studente a qualche materia y=si n=no? \n").lower()
         if risposta == "y":
-            materia = input("Scegli materia: ")
-            voto = input("Scegli voto tra 1 a 10: ")
+            materia = input("Scegli materia: ").lower()
+            voto = int(input("Scegli voto tra 1 a 10: "))
             nuova_valutazione = vt.Voto(materia, voto)
-            nuova_valutazione.aggiungi_voto(materia, voto)
             nuovo_studente.caricaStudentiVotieMaterieSulJson(self.id_counter, name, eta, classe, materia, voto)
         elif risposta == "n":
             nuovo_studente.caricaStudentiSulJson(self.id_counter, name, eta, classe)
