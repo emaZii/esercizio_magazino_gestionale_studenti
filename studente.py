@@ -16,7 +16,6 @@ class Studente:
             "nome": self.name,
             "eta": self.age,
             "classe": self.classroom,
-            "materia": self.pg.materia,
-
+            "materia": self.pg.to_dict(),
         }
 

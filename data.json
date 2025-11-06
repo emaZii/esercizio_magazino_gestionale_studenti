@@ -1,20 +1,13 @@
-[
-    "id",
-    1
-][
-    "name",
-    "ema"
-][
-    "age",
-    "33"
-][
-    "classroom",
-    "1d"
-][
-    "pg",
-    {
+{
+    "id": 1,
+    "nome": "ema",
+    "eta": "33",
+    "classe": "1d",
+    "materia": {
         "id": 1,
         "materia": "italiano",
-        "valutazione": []
+        "valutazione": [
+            5
+        ]
     }
-]
+}
