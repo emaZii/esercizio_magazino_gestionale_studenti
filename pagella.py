@@ -1,9 +1,10 @@
 import voto
-import studente
+import studente as Studente
+import voto as Voto
 
 class Pagella:
-    def __init__(self, idStudente, Studente, Voto):
-        self.idStudente = idStudente
-        self.Studente = Studente.id
-        self.Voto = Voto.materia
-        self.Voto = Voto.valutazione
+
+    def __init__(self, studente: Studente, voto: Voto):
+        self.id = studente.id
+        self.materia = voto.materia
+        self.voto = voto.valuta

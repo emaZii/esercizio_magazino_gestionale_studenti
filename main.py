@@ -42,10 +42,7 @@
 """
 
 
-import Myjson
-import studente
-import pagella
-import voto
+import GestioneStudenti as gs
 
 class Software:
 
@@ -63,24 +60,31 @@ class Software:
        Crea lo studente in modo sincrono
     </summary>
     '''
-    def SalvaInformazionieStampa(self, id, nome,age, materia,voto):
-        pass
+    def SalvaInformazionieStampa(self):
+        id += 1
+        name = input("Scegli nome: ")
+        eta = input("Scegli eta: ")
+        classe = input("Scegli classe: ")
+        nuovo_studente = gs.GestioneStudenti()
+        nuovo_studente.caricaStudentiSulJson(id, name, eta, classe)
+
 
     def SalvaInformazionieStampaAsync(self):
         pass
 
- sw = Software()
+sw = Software()
 
 def main():
     print("Scegli la modalita: \n")
     print("tasto-1 Salvare le informazione e stampare (sincrono) \n")
     print("tasto-2 Salvare le informazione e stampare (asyncrono) \n")
     tasto  = input("Scegli la modalita: \n")
-    #crea lo studente sincorno
+
+    #Crea lo studente sincorno
     if tasto =="1":
         sw.SalvaInformazionieStampa()
 
-    #crea lo studente in modo asicrono
+    # Crea lo studente in modo asicrono
     if tasto =="2":
         pass
         #sw.SalvaInformazionieStampaAsync()
