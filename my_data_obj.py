@@ -17,8 +17,6 @@ class JSONManager:
         </summary>
         """
         with open(self.file_path, 'r') as file:
-            if os.path.getsize(self.file_path) == 0:
-                return []
             data = json.load(file)
             if not isinstance(data, list):
                 data = []
@@ -39,10 +37,14 @@ class JSONManager:
             Inserisce un nuovo dato
         </summary>
         """
-        data = self.read_data()
-        data.append(new_entry)
-        self.write_data(data)
-        print("Entry added successfully!")
+        if os.path.getsize(self.file_path) > 1:
+            data = self.read_data()
+            data.append(new_entry)
+            self.write_data(data)
+            print("Entry added successfully!")
+        else:
+            self.write_data(new_entry)
+            print("Entry added successfully!")
 
     '''
     <summary>
