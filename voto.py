@@ -7,6 +7,7 @@
     # Fisica
 </summaru>
 '''
+
 class Voto:
 
     def __init__(self,  materia, valutazione):

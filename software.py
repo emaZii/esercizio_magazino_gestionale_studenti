@@ -40,26 +40,24 @@
         - chiedere di vedere i 3 studenti con la media voto in pagella più alta/bassa. (in ordine)
 </summary>
 """
-
-import GestioneStudenti as gs
+import gestione_studenti as gs
 import voto as vt
-import MyDataObj as mydataobj
+import my_data_obj as mydataobj
 
 class Software:
 
     def __init__(self):
         self.id_counter = 0
 
-
     def printPagellaOfAnClassroom(self, ):
         new_data = mydataobj.WriteObject()
         print(new_data.ReadOnJson("classroom"))
 
     def sortPagellaLowHigh(self):
-        pass
+        ...
 
     def printPagellaHighAndLow(self):
-        pass
+        ...
 
     '''
     <summary>
@@ -83,4 +81,4 @@ class Software:
             nuovo_studente.caricaStudentiSulJson(self.id_counter, name, eta, classe)
 
     def SalvaInformazionieStampaAsync(self):
-        pass
+        ...

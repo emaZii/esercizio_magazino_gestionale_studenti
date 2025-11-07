@@ -1,14 +1,14 @@
-import pagella as pg
+from pagella import Pagella
 
 class Studente:
 
     #Costruttore
-    def __init__(self, id, name, age, classroom, Pagella:pg):
+    def __init__(self, id, name, age, classroom, pagella:Pagella):
         self.id = id
         self.name = name
         self.age = age
         self.classroom = classroom
-        self.pg = Pagella
+        self.pg = pagella
 
     def to_dict(self):
         return {
