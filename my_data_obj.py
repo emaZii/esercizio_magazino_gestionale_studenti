@@ -86,14 +86,59 @@ class JSONManager:
         else:
             print("Entry not found!")
 
-    def query(self, key, value):
+    '''
+    def query(self, key):
         """
         <summary>
             Query e ritorna i dati che combaciano con chiave valore.
         </summary>
         """
         data = self.read_data()
-        results = [entry for entry in data if entry.get(key) == value]
+        results = [entry.get("") for entry in data if key in entry]
+        for entry in data:
+            for key in entry:
+                nome = entry.get("nome")
+                eta = entry[key]
+                print(f"Nome: {nome}, Età: {eta}")
+                results.append((nome, eta))
         return results
+    '''
+
+    def etaYoungOld(self, key):
+        """
+        <summary>
+            Query che accetta 'eta' come chiave, stampa nome ed età ordinati dal più giovane al più anziano.
+        </summary>
+        """
+        data = self.read_data()
+
+        filtered = []
+
+        for entry in data:
+            if key in entry:
+                nome = entry.get("nome")
+                valore = entry[key]
+                filtered.append((nome, valore))
+
+        sorted_results = sorted(filtered)
+
+        for nome, eta in sorted_results:
+            print(f"Nome: {nome}, Età: {eta}")
+
+        return sorted_results
 
 
+    def classespecifica(self, nome_classe):
+
+        data = self.read_data()
+
+        studenti_filtrati = []
+
+        for studente in data:
+            if "classe"in studente and studente["classe"] == nome_classe:
+                studenti_filtrati.append(studente)
+
+        for studente in studenti_filtrati:
+            print(f"Studente: {studente}")
+
+        return studenti_filtrati

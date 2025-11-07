@@ -44,20 +44,32 @@ import gestione_studenti as gs
 import voto as vt
 import my_data_obj as mydataobj
 
+new_data = mydataobj.JSONManager("data.json")
+
 class Software:
 
     def __init__(self):
         self.id_counter = 0
 
-    def printPagellaOfAnClassroom(self, ):
-        new_data = mydataobj.WriteObject()
-        print(new_data.ReadOnJson("classroom"))
+    def PrintAllData(self):
+        global new_data
+        print(new_data.read_data())
+
+    def printPagellaOfAnClassroom(self):
+        ...
 
     def sortPagellaLowHigh(self):
         ...
 
-    def printPagellaHighAndLow(self):
-        ...
+    def queryclasse(self):
+        global new_data
+        string = input("Scegli classe: ")
+        new_data.classespecifica(string)
+
+    def printAgeHighAndLow(self):
+        global new_data
+        print("Ecco la pagella ordinata dal studente piu grande al piccolo")
+        new_data.etaYoungOld("eta")
 
     '''
     <summary>

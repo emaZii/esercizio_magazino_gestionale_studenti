@@ -11,11 +11,7 @@ def main():
             break
 
 def MenuPrincipale():
-    print("Scegli la modalita: \n")
-    print("tasto-1 Salvare le informazione e stampare (sincrono) \n")
-    print("tasto-2 Salvare le informazione e stampare (asyncrono) \n")
-    print("tasto-3 stampa la classe specifica \n")
-    print("Tasto Q-q (quit) per uscire dal software \n")
+    ComandiText()
     tasto  = input("Scegli la modalita: \n")
 
     #Crea lo studente sincorno
@@ -27,12 +23,26 @@ def MenuPrincipale():
         ...
         #nuovo_software.SalvaInformazionieStampaAsync()
 
+    #stampa lo studente dal leta piu piccola al piu grande
     if tasto == "3":
-        ...
-        #nuovo_software.printPagellaOfAnClassroom()
+        nuovo_software.printAgeHighAndLow()
+
+    # stampa studenti di una classe specifica
+    if tasto == "4":
+        nuovo_software.queryclasse()
+
+    #esci dal software
     if tasto == "q" or tasto == "Q":
         global vuoi_uscire
         vuoi_uscire = True
+
+def ComandiText():
+    print("Scegli La Modalita: \n")
+    print("-1 Salvare le informazione e stampare (sincrono)")
+    print("-2 Salvare le informazione e stampare (asyncrono)")
+    print("-3 stampa lo studente piu piccolo al piu grande")
+    print("-4 stampa una classe specifica")
+    print("'Q'-'q' (quit) per uscire dal software")
 
 if __name__ == "__main__":
     main()
