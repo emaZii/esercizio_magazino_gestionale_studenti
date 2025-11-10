@@ -18,10 +18,10 @@ def MenuPrincipale():
     if tasto =="1":
         nuovo_software.SalvaInformazionieStudente()
 
-    # Crea lo studente in modo asicrono
+    # assegnare un voto a un studente esistente
     if tasto == "2":
-        ...
-        #nuovo_software.SalvaInformazionieStampaAsync()
+        nuovo_software.assegnavotoemateria()
+
 
     #stampa lo studente dal leta piu piccola al piu grande
     if tasto == "3":
@@ -44,12 +44,12 @@ def MenuPrincipale():
 
 def ComandiText():
     print("Scegli La Modalita: \n")
-    print("-1 Salvare le informazione e stampare (sincrono)")
-    print("-2 Salvare le informazione e stampare (asyncrono)")
-    print("-3 stampa lo studente piu piccolo al piu grande")
-    print("-4 stampa una classe specifica")
-    print("-5 stampa un voto di una materia di uno studente")
-    print("-6 stampa la media dei Voti")
+    print("-1 Crea uno studente")
+    print("-2 Assegna un voto ad una materia a uno studente")
+    print("-3 Stampa lo studente piu piccolo al piu grande")
+    print("-4 Stampa una classe specifica")
+    print("-5 Stampa un voto di una materia di uno studente")
+    print("-6 Stampa la media dei Voti")
     print("'Q'or'q'(quit) per uscire dal software")
 
 if __name__ == "__main__":

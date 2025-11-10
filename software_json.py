@@ -111,6 +111,20 @@ class SoftwareJson:
 
     '''
     <summary>
+        Assegnare il voto dello studente...
+    </summary>
+    '''
+    def assegnailvotoallapagella(self):
+        print("Assegan Voto e materia")
+        nuovo_studente = gs.GestioneStudenti()
+        self.id_counter += 1
+        materia = input("Scegli materia: ").lower()
+        voto = int(input("Scegli voto tra 1 a 10: "))
+        nuova_valutazione = vt.Voto(materia, voto)
+        nuovo_studente.caricaStudentiVotieMaterieSulJson(self.id_counter, '', 0, '', materia, voto)
+
+    '''
+    <summary>
         Query che stampa il voto di una specifica materia di un specifico studente
     </summary>
     '''
@@ -119,4 +133,16 @@ class SoftwareJson:
         nome_materia = input("Scegli la materia [italiano, matematica, fisica, inglese]: ").lower()
         new_data_obj = mydataobj.JSONManager("data.json")
         new_data_obj.queryStudenteMateria(nome_studente, nome_materia)
+
+    '''
+    <summary>
+        assegna il voto dello studente...
+    </summary>
+    '''
+    def assegnavotoemateria(self):
+        new_data_obj = mydataobj.JSONManager("data.json")
+        nome = input("Scegli nome: ").lower()
+        materia = input("Scegli materia: ").lower()
+        voto = int(input("Scegli voto tra 1 a 10: "))
+        new_data_obj.updatestudentefromname(nome,materia, voto)
 

@@ -4,8 +4,11 @@
         "nome": "ema",
         "eta": "33",
         "classe": "4d",
-        "materia": "italiano",
-        "valutazione": 4
+        "materia": {
+            "id": 2,
+            "materia": "",
+            "valutazione": 0
+        }
     },
     {
         "id": 2,

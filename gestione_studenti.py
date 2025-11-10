@@ -40,3 +40,4 @@ class GestioneStudenti:
         nuovo_studente = stu.Studente(id_counter=id_counter, name=name, age=eta, classroom=classe, pagella=nuovo_pagella)
         writer = json.JSONManager("data.json")
         writer.insert(nuovo_studente.to_dict())
+

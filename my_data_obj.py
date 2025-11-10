@@ -50,21 +50,18 @@ class JSONManager:
             self.write_data(new_entry)
             print("Entry added successfully!")
 
-    def update(self, key, value, updated_entry):
-        """
-        <summary>
-            aggiorna un specifico record che combacia chiave valore
-        </summary>
-        """
+    def updatestudentefromname(self, name, materia, voto):
         data = self.read_data()
+        updated = False
         for entry in data:
-            if entry.get(key) == value:
-                entry.update(updated_entry)
-                self.write_data(data)
-                print("Entry updated successfully!")
-                return
-        print("Entry not found!")
+            if entry.get("nome") == name:
+                entry['materia'] = materia
+                entry['valutazione'] = voto
+                updated = True
+                break  # Se vuoi aggiornare solo il primo match
 
+        if updated:
+            self.write_data(data)
 
     def delete(self, key, value):
         """
