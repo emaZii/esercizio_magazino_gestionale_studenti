@@ -1,24 +1,11 @@
-[
-    {
+{
+    "id": 2,
+    "nome": "ema",
+    "eta": "45",
+    "classe": "4r",
+    "materia": {
         "id": 2,
-        "nome": "giorgio",
-        "eta": "33",
-        "classe": "2d",
-        "materia": {
-            "id": 2,
-            "materia": "italiano",
-            "valutazione": 4
-        }
-    },
-    {
-        "id": 1,
-        "nome": "ema",
-        "eta": "44",
-        "classe": "6i",
-        "materia": {
-            "id": 1,
-            "materia": "italiano",
-            "valutazione": 4
-        }
+        "materia": "",
+        "valutazione": 0
     }
-]
+}

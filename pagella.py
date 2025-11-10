@@ -5,16 +5,14 @@ import json
 
 class Pagella:
 
-    def __init__(self, id, materia, voto):
-        self.id = id
+    def __init__(self, id_counter, materia, voto):
+        self.id_counter = id_counter
         self.materia = materia
         self.voto = voto
 
     def to_dict(self):
         return {
-            "id": self.id,
+            "id": self.id_counter,
             "materia": self.materia,
             "valutazione": self.voto
         }
-
-

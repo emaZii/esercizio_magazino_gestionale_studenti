@@ -46,30 +46,47 @@ import my_data_obj as mydataobj
 
 new_data = mydataobj.JSONManager("data.json")
 
-class Software:
+class SoftwareJson:
 
     def __init__(self):
         self.id_counter = 0
 
+    '''
+    <summary>
+        Stampa tutti i dati che ci sono sul json
+    </summary>
+    '''
     def PrintAllData(self):
         global new_data
         print(new_data.read_data())
 
-    def printPagellaOfAnClassroom(self):
-        ...
-
-    def sortPagellaLowHigh(self):
-        ...
-
+    '''
+    <summary>
+        La query che stampa tutti i studenti di una classe specifica
+    </summary>
+    '''
     def queryclasse(self):
         global new_data
         string = input("Scegli classe: ")
         new_data.classespecifica(string)
-
+    '''
+    <summary>
+        Query che stampa dallo studente di eta piu piccolo al piu grande
+    </summary>
+    '''
     def printAgeHighAndLow(self):
         global new_data
         print("Ecco la pagella ordinata dal studente piu grande al piccolo")
         new_data.etaYoungOld("eta")
+
+    '''
+    <summary>
+        Fa la media dei voti dei studenti
+    </summary>
+    '''
+    def mediaVoto(self):
+        new_data.MediaDeiVoti()
+        print(new_data)
 
     '''
     <summary>
@@ -84,7 +101,7 @@ class Software:
         eta = input("Scegli eta: ").lower()
         classe = input("Scegli classe: ").lower()
         risposta = input("Adesso vuoi dai il voto dello studente a qualche materia y=si n=no? \n").lower()
-        if risposta == "y":
+        if risposta == "y" or risposta == "s":
             materia = input("Scegli materia: ").lower()
             voto = int(input("Scegli voto tra 1 a 10: "))
             nuova_valutazione = vt.Voto(materia, voto)
@@ -92,5 +109,14 @@ class Software:
         elif risposta == "n":
             nuovo_studente.caricaStudentiSulJson(self.id_counter, name, eta, classe)
 
-    def SalvaInformazionieStampaAsync(self):
-        ...
+    '''
+    <summary>
+        Query che stampa il voto di una specifica materia di un specifico studente
+    </summary>
+    '''
+    def queryStudente_materia(self):
+        nome_studente = input("Scegli nome: ").lower()
+        nome_materia = input("Scegli la materia [italiano, matematica, fisica, inglese]: ").lower()
+        new_data_obj = mydataobj.JSONManager("data.json")
+        new_data_obj.queryStudenteMateria(nome_studente, nome_materia)
+

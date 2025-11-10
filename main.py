@@ -1,6 +1,6 @@
-import software as sw
+import software_json as sw
 
-nuovo_software = sw.Software()
+nuovo_software = sw.SoftwareJson()
 
 vuoi_uscire = False
 
@@ -31,6 +31,12 @@ def MenuPrincipale():
     if tasto == "4":
         nuovo_software.queryclasse()
 
+    if tasto == "5":
+        nuovo_software.queryStudente_materia()
+
+    if tasto == "6":
+        nuovo_software.mediaVoto()
+
     #esci dal software
     if tasto == "q" or tasto == "Q":
         global vuoi_uscire
@@ -42,7 +48,9 @@ def ComandiText():
     print("-2 Salvare le informazione e stampare (asyncrono)")
     print("-3 stampa lo studente piu piccolo al piu grande")
     print("-4 stampa una classe specifica")
-    print("'Q'-'q' (quit) per uscire dal software")
+    print("-5 stampa un voto di una materia di uno studente")
+    print("-6 stampa la media dei Voti")
+    print("'Q'or'q'(quit) per uscire dal software")
 
 if __name__ == "__main__":
     main()

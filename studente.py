@@ -3,8 +3,8 @@ from pagella import Pagella
 class Studente:
 
     #Costruttore
-    def __init__(self, id, name, age, classroom, pagella:Pagella):
-        self.id = id
+    def __init__(self, id_counter, name, age, classroom, pagella:Pagella):
+        self.id_counter = id_counter
         self.name = name
         self.age = age
         self.classroom = classroom
@@ -12,7 +12,7 @@ class Studente:
 
     def to_dict(self):
         return {
-            "id": self.id,
+            "id": self.id_counter,
             "nome": self.name,
             "eta": self.age,
             "classe": self.classroom,
