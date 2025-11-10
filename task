@@ -90,17 +90,3 @@ A questo punto devo poter:
 - chiedere di vedere i 3 studenti con la media voto in pagella più alta/bassa. (in ordine)
 
 
---------------------------
-#st = Studente("1","Emanuele",33, "1D")
-#pg = Pagella(1)
-#vt = Voto("Italiano",6)
-
-#with open("data.json", "r") as file:
-#    data = json.load(file)  # Load JSON data from file
-#    print(data)
-
-#with open("data.json", "w") as file:
-#    json.dump(data, file, indent=4)
-
-#data = {"id": pg.idStudente, "name": st.name, "age": st.age, "Classroom":st.classroom, f"{vt.materia}":vt.valutazione}
-

@@ -18,12 +18,6 @@ class GestioneStudenti:
         writer = json.JSONManager("data.json")
         writer.insert(nuovo_studente.to_dict())
 
-
-    def stampaTuttoJson(self):
-        reader = json.JSONManager("data.json")
-        data = reader.read_data()
-        print(data)
-
     def mediaVoti(self):
         reader = json.JSONManager("data.json")
         data = reader.MediaDeiVoti()

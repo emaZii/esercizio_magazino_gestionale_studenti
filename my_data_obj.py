@@ -152,8 +152,6 @@ class JSONManager:
         print(studenti[-2][0], ":", studenti[-2][1])
         print(studenti[-3][0], ":", studenti[-3][1])
 
-
-
     def queryStudenteMateria(self,nome_studente, materia):
 
         data = self.read_data()

@@ -45,9 +45,15 @@ import voto as vt
 import my_data_obj as mydataobj
 
 new_data = mydataobj.JSONManager("data.json")
+'''
+<summary>
+    --JSON--
+</summary>
+'''
 
 class SoftwareJson:
 
+    #costruttore
     def __init__(self):
         self.id_counter = 0
 
@@ -136,7 +142,7 @@ class SoftwareJson:
 
     '''
     <summary>
-        assegna il voto dello studente...
+        Assegna il voto dello studente...
     </summary>
     '''
     def assegnavotoemateria(self):
