@@ -1,4 +1,5 @@
 import pandas as pd
+import json
 import os
 
 '''
@@ -9,13 +10,12 @@ import os
 class CSVReader:
     """
     <summary>
-        Classe per leggere file CSV usando pandas in modo sicuro e riutilizzabile.
+        Classe per leggere file CSV usando pandas.
     <summary>
     """
-    def __init__(self, file_path: str, sep: str = ",", encoding: str = "utf-8"):
+    def __init__(self, file_path: str, sep: str = ";"):
         self.file_path = file_path
         self.sep = sep
-        self.encoding = encoding
         self.dataframe = None
 
     def validate_file(self) -> bool:
@@ -30,49 +30,87 @@ class CSVReader:
             raise ValueError("Il file deve avere estensione .csv")
         return True
 
-    def load_data(self) -> pd.DataFrame:
+    def csv_to_json(self, csv_path='dati.csv', json_path='data.json', orient="records"):
         """
         <summary>
-            Legge il file CSV in un DataFrame pandas.
+            Legge un file CSV e lo salva nel JSON.
+        </summary>
+        """
+        #verifica se il file csv esista
+        if not os.path.isfile(csv_path):
+            return "Il file CSV non è stato trovato: crea il file 'dati.csv'."
+
+        # verifica se il file json esiste o e vuoto
+        if not os.path.exists(json_path) or os.path.getsize(json_path) == 0:
+            with open(json_path, 'w') as f:
+                json.dump([], f, ensure_ascii=False, indent=4)
+
+        #legge il file csv
+        df = pd.read_csv(csv_path, sep=';')
+
+        #salva i dati del json in una variabile
+        with open(json_path, 'r') as f:
+            data = json.load(f)
+
+        #converte i dati csv in formato json
+        csv_data = json.loads(df.to_json(orient=orient, force_ascii=False))
+
+        #unisce i dati
+        data.extend(csv_data)
+
+        #salva i dati uniti nel json
+        with open(json_path, 'w') as f:
+            json.dump(data, f, ensure_ascii=False, indent=4)
+
+        return f"Conversione completata: {csv_path} a {json_path}"
+
+    def media_dei_voti(self, csv_path, nome_materia_voto):
+        """
+        <summary>
+            Legge un file CSV fa la media dei tre studenti con i voti piu alti
+            e la media dei voti dei tre studenti con i voti piu bassi.
         </summary>
         """
         self.validate_file()
-        self.dataframe = pd.read_csv(self.file_path, sep=self.sep, encoding=self.encoding)
-        return self.dataframe
+        df = pd.read_csv(csv_path, sep=';')
 
-    def get_head(self, n: int = 5) -> pd.DataFrame:
+        print("Colonne del CSV:", df.columns.tolist())
+        print(df.columns.tolist())
+
+        df_ordinato_1 = df.sort_values(by=nome_materia_voto, ascending=False)
+        medie_piu_alti = df_ordinato_1.groupby('Nome')[nome_materia_voto].mean()
+        tre_piu_alti = df_ordinato_1.head(3)
+
+        df_ordinato_2 = df.sort_values(by=nome_materia_voto, ascending=True)
+        medie_piu_bassi = df_ordinato_2.groupby('Nome')[nome_materia_voto].mean()
+        tre_piu_bassi = df_ordinato_2.head(3)
+
+        return f"{tre_piu_alti[['Nome', nome_materia_voto]]}, {tre_piu_bassi[['Nome', nome_materia_voto]]}"
+
+
+    def dal_piu_grande_al_piu_piccolo(self, csv_path):
         """
         <summary>
-            Restituisce le prime n righe del DataFrame.
+            Legge un file CSV e stampa dallo studente piu grande al piu piccolo di eta.
         </summary>
         """
-        if self.dataframe is None:
-            raise ValueError("I dati non sono stati caricati")
-        return self.dataframe.head(n)
+        self.validate_file()
 
-    def get_info(self):
+        df = pd.read_csv(csv_path, sep=';')
+        df_ordinato = df.sort_values(by='eta', ascending=False)
+
+        return f"{df_ordinato[['Nome','eta']]}"
+
+    def stampa_una_classe_specifica(self, csv_path, nome_classe):
         """
         <summary>
-            Mostra informazioni sul DataFrame.
+            Legge un file CSV e stampa una classe specifica.
         </summary>
         """
-        if self.dataframe is None:
-            raise ValueError("I dati non sono stati caricati")
-        return self.dataframe.info()
+        self.validate_file()
+        df = pd.read_csv(csv_path, sep=';')
 
-    def csv_to_json(csv_path, json_path, orient="records"):
-        """
-        <summary>
-            Legge un file CSV e lo salva come JSON.
-        </summary>
-        """
-        # Controllo esistenza file
-        if not os.path.isfile(csv_path):
-            raise FileNotFoundError(f"Il file CSV '{csv_path}' non esiste.")
-        # Lettura CSV
-        df = pd.read_csv(csv_path)
-        # Salvataggio in JSON
-        df.to_json(json_path, orient=orient, force_ascii=False, indent=4)
-
-        print(f"Conversione completata: '{json_path}' creato con successo.")
-
+        # Filtra i record
+        df_mask = df['Classe'] == nome_classe
+        filtered_df = df[df_mask]
+        print(filtered_df)

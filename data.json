@@ -4,8 +4,11 @@
         "nome": "ema",
         "eta": "33",
         "classe": "4d",
-        "materia": "italiano",
-        "valutazione": 4
+        "materia": {
+            "id": 1,
+            "materia": "",
+            "valutazione": 0
+        }
     },
     {
         "id": 2,
@@ -28,5 +31,275 @@
             "materia": "inglese",
             "valutazione": 7
         }
+    },
+    {
+        "Nome": "paolo",
+        "eta": 33,
+        "Classe": "4f",
+        "VotoInglese": 3,
+        "VotoItaliano": 6,
+        "VotoMatematica": 8,
+        "VotoFisica": 7
+    },
+    {
+        "Nome": "giovanni",
+        "eta": 29,
+        "Classe": "5f",
+        "VotoInglese": 5,
+        "VotoItaliano": 4,
+        "VotoMatematica": 6,
+        "VotoFisica": 5
+    },
+    {
+        "Nome": "luca",
+        "eta": 30,
+        "Classe": "2f",
+        "VotoInglese": 8,
+        "VotoItaliano": 8,
+        "VotoMatematica": 2,
+        "VotoFisica": 2
+    },
+    {
+        "Nome": "marco",
+        "eta": 36,
+        "Classe": "3e",
+        "VotoInglese": 7,
+        "VotoItaliano": 7,
+        "VotoMatematica": 6,
+        "VotoFisica": 4
+    },
+    {
+        "Nome": "giovanni",
+        "eta": 33,
+        "Classe": "4f",
+        "VotoInglese": 6,
+        "VotoItaliano": 6,
+        "VotoMatematica": 7,
+        "VotoFisica": 9
+    },
+    {
+        "Nome": "emanuele",
+        "eta": 25,
+        "Classe": "5f",
+        "VotoInglese": 4,
+        "VotoItaliano": 6,
+        "VotoMatematica": 8,
+        "VotoFisica": 5
+    },
+    {
+        "Nome": "nicola",
+        "eta": 35,
+        "Classe": "5t",
+        "VotoInglese": 6,
+        "VotoItaliano": 7,
+        "VotoMatematica": 4,
+        "VotoFisica": 7
+    },
+    {
+        "Nome": "carmela",
+        "eta": 21,
+        "Classe": "2f",
+        "VotoInglese": 6,
+        "VotoItaliano": 7,
+        "VotoMatematica": 7,
+        "VotoFisica": 6
+    },
+    {
+        "Nome": "dario",
+        "eta": 34,
+        "Classe": "5t",
+        "VotoInglese": 6,
+        "VotoItaliano": 8,
+        "VotoMatematica": 6,
+        "VotoFisica": 7
+    },
+    {
+        "Nome": "alfio",
+        "eta": 36,
+        "Classe": "5t",
+        "VotoInglese": 7,
+        "VotoItaliano": 4,
+        "VotoMatematica": 5,
+        "VotoFisica": 5
+    },
+    {
+        "Nome": "paolo",
+        "eta": 33,
+        "Classe": "4f",
+        "VotoInglese": 3,
+        "VotoItaliano": 6,
+        "VotoMatematica": 8,
+        "VotoFisica": 7
+    },
+    {
+        "Nome": "giovanni",
+        "eta": 29,
+        "Classe": "5f",
+        "VotoInglese": 5,
+        "VotoItaliano": 4,
+        "VotoMatematica": 6,
+        "VotoFisica": 5
+    },
+    {
+        "Nome": "luca",
+        "eta": 30,
+        "Classe": "2f",
+        "VotoInglese": 8,
+        "VotoItaliano": 8,
+        "VotoMatematica": 2,
+        "VotoFisica": 2
+    },
+    {
+        "Nome": "marco",
+        "eta": 36,
+        "Classe": "3e",
+        "VotoInglese": 7,
+        "VotoItaliano": 7,
+        "VotoMatematica": 6,
+        "VotoFisica": 4
+    },
+    {
+        "Nome": "giovanni",
+        "eta": 33,
+        "Classe": "4f",
+        "VotoInglese": 6,
+        "VotoItaliano": 6,
+        "VotoMatematica": 7,
+        "VotoFisica": 9
+    },
+    {
+        "Nome": "emanuele",
+        "eta": 25,
+        "Classe": "5f",
+        "VotoInglese": 4,
+        "VotoItaliano": 6,
+        "VotoMatematica": 8,
+        "VotoFisica": 5
+    },
+    {
+        "Nome": "nicola",
+        "eta": 35,
+        "Classe": "5t",
+        "VotoInglese": 6,
+        "VotoItaliano": 7,
+        "VotoMatematica": 4,
+        "VotoFisica": 7
+    },
+    {
+        "Nome": "carmela",
+        "eta": 21,
+        "Classe": "2f",
+        "VotoInglese": 6,
+        "VotoItaliano": 7,
+        "VotoMatematica": 7,
+        "VotoFisica": 6
+    },
+    {
+        "Nome": "dario",
+        "eta": 34,
+        "Classe": "5t",
+        "VotoInglese": 6,
+        "VotoItaliano": 8,
+        "VotoMatematica": 6,
+        "VotoFisica": 7
+    },
+    {
+        "Nome": "alfio",
+        "eta": 36,
+        "Classe": "5t",
+        "VotoInglese": 7,
+        "VotoItaliano": 4,
+        "VotoMatematica": 5,
+        "VotoFisica": 5
+    },
+    {
+        "Nome": "paolo",
+        "eta": 33,
+        "Classe": "4f",
+        "VotoInglese": 3,
+        "VotoItaliano": 6,
+        "VotoMatematica": 8,
+        "VotoFisica": 7
+    },
+    {
+        "Nome": "giovanni",
+        "eta": 29,
+        "Classe": "5f",
+        "VotoInglese": 5,
+        "VotoItaliano": 4,
+        "VotoMatematica": 6,
+        "VotoFisica": 5
+    },
+    {
+        "Nome": "luca",
+        "eta": 30,
+        "Classe": "2f",
+        "VotoInglese": 8,
+        "VotoItaliano": 8,
+        "VotoMatematica": 2,
+        "VotoFisica": 2
+    },
+    {
+        "Nome": "marco",
+        "eta": 36,
+        "Classe": "3e",
+        "VotoInglese": 7,
+        "VotoItaliano": 7,
+        "VotoMatematica": 6,
+        "VotoFisica": 4
+    },
+    {
+        "Nome": "giovanni",
+        "eta": 33,
+        "Classe": "4f",
+        "VotoInglese": 6,
+        "VotoItaliano": 6,
+        "VotoMatematica": 7,
+        "VotoFisica": 9
+    },
+    {
+        "Nome": "emanuele",
+        "eta": 25,
+        "Classe": "5f",
+        "VotoInglese": 4,
+        "VotoItaliano": 6,
+        "VotoMatematica": 8,
+        "VotoFisica": 5
+    },
+    {
+        "Nome": "nicola",
+        "eta": 35,
+        "Classe": "5t",
+        "VotoInglese": 6,
+        "VotoItaliano": 7,
+        "VotoMatematica": 4,
+        "VotoFisica": 7
+    },
+    {
+        "Nome": "carmela",
+        "eta": 21,
+        "Classe": "2f",
+        "VotoInglese": 6,
+        "VotoItaliano": 7,
+        "VotoMatematica": 7,
+        "VotoFisica": 6
+    },
+    {
+        "Nome": "dario",
+        "eta": 34,
+        "Classe": "5t",
+        "VotoInglese": 6,
+        "VotoItaliano": 8,
+        "VotoMatematica": 6,
+        "VotoFisica": 7
+    },
+    {
+        "Nome": "alfio",
+        "eta": 36,
+        "Classe": "5t",
+        "VotoInglese": 7,
+        "VotoItaliano": 4,
+        "VotoMatematica": 5,
+        "VotoFisica": 5
     }
 ]
