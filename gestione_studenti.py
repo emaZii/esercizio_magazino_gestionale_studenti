@@ -1,4 +1,5 @@
-# gestione_studenti.py
+
+"""
 
 import my_data_obj as json
 import studente as stu
@@ -35,3 +36,4 @@ class GestioneStudenti:
         writer = json.JSONManager("data.json")
         writer.insert(nuovo_studente.to_dict())
 
+"""

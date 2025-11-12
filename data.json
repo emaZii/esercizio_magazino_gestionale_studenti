@@ -301,5 +301,16 @@
         "VotoItaliano": 4,
         "VotoMatematica": 5,
         "VotoFisica": 5
+    },
+    {
+        "id": 2,
+        "nome": "ema",
+        "eta": "33",
+        "classe": "4r",
+        "materia": {
+            "id": 2,
+            "materia": "inglese",
+            "valutazione": 5
+        }
     }
 ]

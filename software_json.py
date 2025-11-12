@@ -43,6 +43,9 @@
 import gestione_studenti as gs
 import voto as vt
 import my_data_obj as mydataobj
+import studente as stu
+import pagella as pg
+
 
 new_data = mydataobj.JSONManager("data.json")
 '''
@@ -56,6 +59,26 @@ class SoftwareJson:
     #costruttore
     def __init__(self):
         self.id_counter = 0
+
+
+
+    def mediaVoti(self):
+        reader = mydataobj.JSONManager("data.json")
+        data = reader.MediaDeiVoti()
+        print(data)
+
+    '''
+    <summary>
+        Carica i dati dello studente senza dare il voto
+    <summary>
+    '''
+    def caricaStudentiSulJson(self, id_counter, name, eta, classe, materia="",  voto = 0):
+        id_counter += 1
+        nuovo_pagella = pg.Pagella(id_counter=id_counter, materia=materia, voto=voto)
+        nuovo_studente = stu.Studente(id_counter=id_counter, name=name, age=eta, classroom=classe, pagella=nuovo_pagella)
+        writer = mydataobj.JSONManager("data.json")
+        writer.insert(nuovo_studente.to_dict())
+
 
     '''
     <summary>
@@ -101,7 +124,6 @@ class SoftwareJson:
     '''
     def SalvaInformazionieStudente(self):
         print("Creazione Studente")
-        nuovo_studente = gs.GestioneStudenti()
         self.id_counter += 1
         name = input("Scegli nome: ").lower()
         eta = input("Scegli eta: ").lower()
@@ -111,10 +133,17 @@ class SoftwareJson:
             materia = input("Scegli materia: ").lower()
             voto = int(input("Scegli voto tra 1 a 10: "))
             nuova_valutazione = vt.Voto(materia, voto)
-            nuovo_studente.caricaStudentiVotieMaterieSulJson(self.id_counter, name, eta, classe, materia, voto)
+            self.caricaStudentiVotieMaterieSulJson(self.id_counter, name, eta, classe, materia, voto)
         elif risposta == "n":
-            nuovo_studente.caricaStudentiSulJson(self.id_counter, name, eta, classe)
+            self.caricaStudentiSulJson(self.id_counter, name, eta, classe)
 
+    def caricaStudentiVotieMaterieSulJson(self, id_counter, nome, eta, classroom, materia, voto):
+        id_counter += 1
+        nuovo_pagella = pg.Pagella(id_counter=id_counter, materia=materia, voto=voto)
+        nuovo_studente = stu.Studente(id_counter=id_counter, name=nome, age=eta, classroom=classroom,
+                                      pagella=nuovo_pagella)
+        writer = mydataobj.JSONManager("data.json")
+        writer.insert(nuovo_studente.to_dict())
     '''
     <summary>
         Assegnare il voto dello studente...
@@ -122,12 +151,11 @@ class SoftwareJson:
     '''
     def assegnailvotoallapagella(self):
         print("Assegan Voto e materia")
-        nuovo_studente = gs.GestioneStudenti()
         self.id_counter += 1
         materia = input("Scegli materia: ").lower()
         voto = int(input("Scegli voto tra 1 a 10: "))
         nuova_valutazione = vt.Voto(materia, voto)
-        nuovo_studente.caricaStudentiVotieMaterieSulJson(self.id_counter, '', 0, '', materia, voto)
+        self.caricaStudentiVotieMaterieSulJson(self.id_counter, '', 0, '', materia, voto)
 
     '''
     <summary>
