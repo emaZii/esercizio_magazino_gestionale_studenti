@@ -53,18 +53,7 @@ class CSVReader:
         #salva i dati del json in una variabile
         with open(json_path, 'r') as f:
             data = json.load(f)
-        """
-            {
-            "nome": nome,
-            "eta": eta,
-            "classe": classe,
-            materie: [
-            "votoinglese": 3,
-            "votoitaliano": 4,
-            "votomatematica":5,
-            ]
-            }
-        """
+
         for index, row in df.iterrows():
             nome = row["nome"]
             eta = row["eta"]

@@ -42,13 +42,8 @@ Classe:
 
 Riepilogo dati, è corretto? Ok 
 
-Adesso quale è il voto dello studente x in materia y? 
-
-... 
-
-... 
-
- 
+Adesso quale è il voto dello studente x in materia y?
+...
 
 [2] Salvataggio delle informazioni in maniera “asincrona” e print a schermo. 
 
@@ -68,9 +63,7 @@ Premi 1 per creare uno studente
 
 Premi 2 per assegnare i voti allo studente x 
 
-Ecc 
-
- 
+Ecc
 
 [3] Lettura da file excel e print a schermo 
 
@@ -86,6 +79,11 @@ A questo punto devo poter:
 
 - chiedere di vedere i 3 studenti con la media voto in pagella più alta/bassa. (in ordine) 
 
- 
+### Correzioni Aggiuntive
 
+- Salvare il json come quello riportato sotto (uguale a quello che ti ho mandaoto via chat, sia quando si crea via shell, sia quando si importa da .csv
+- Ottimizzare l'ordinamento quando si ricavano i primi/ultimi 3 studenti (ordinare una sola volta la lista)
+- Sistemare il calcolo della media. La desiderata è:
+- Per ogni studente, devo avere la singola media (se s1 ha 10 in italiano e 6 in inglese, la media sarà 8, s2 invece ha 9 in italiano e 6 in fisica e la media è 7.5)
+- Ordinamento in base a questa media
  
