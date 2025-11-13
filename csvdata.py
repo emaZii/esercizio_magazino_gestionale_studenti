@@ -47,16 +47,42 @@ class CSVReader:
 
         #legge il file csv
         df = pd.read_csv(csv_path, sep=';')
+        df.columns.tolist()
+        df.columns = df.columns.str.strip().str.lower()
 
         #salva i dati del json in una variabile
         with open(json_path, 'r') as f:
             data = json.load(f)
-
-        #converte i dati csv in formato json
-        csv_data = json.loads(df.to_json(orient=orient, force_ascii=False))
-
-        #unisce i dati
-        data.extend(csv_data)
+        """
+            {
+            "nome": nome,
+            "eta": eta,
+            "classe": classe,
+            materie: [
+            "votoinglese": 3,
+            "votoitaliano": 4,
+            "votomatematica":5,
+            ]
+            }
+        """
+        for index, row in df.iterrows():
+            nome = row["nome"]
+            eta = row["eta"]
+            classe = row["classe"]
+            header_names = row.keys()
+            names_materie = [nome for nome in header_names if nome.startswith("voto")]
+            data.append({
+                "nome": nome,
+                "eta": eta,
+                "classe": classe,
+                "materia":[
+                    {
+                        "materia": nome_materia,
+                        "valutazione": row[nome_materia]
+                    } for nome_materia in names_materie
+                ]
+            })
+        print(f"I miei dati: {data}")
 
         #salva i dati uniti nel json
         with open(json_path, 'w') as f:

@@ -45,10 +45,9 @@ class JSONManager:
             data = self.read_data()
             data.append(new_entry)
             self.write_data(data)
-            print("Entry added successfully!")
         else:
             self.write_data(new_entry)
-            print("Entry added successfully!")
+        print("Entry added successfully!")
 
     def updatestudentefromname(self, name, materia, voto):
         data = self.read_data()
@@ -105,16 +104,18 @@ class JSONManager:
 
         data = self.read_data()
 
-        studenti_filtrati = []
+        #studenti_filtrati = []
 
         for studente in data:
             if "classe" in studente and studente["classe"] == nome_classe:
-                studenti_filtrati.append(studente)
+                print(f"Studente: {studente}")
 
-        for studente in studenti_filtrati:
-            print(f"Studente: {studente}")
+                #studenti_filtrati.append(studente)
 
-        return studenti_filtrati
+        #for studente in studenti_filtrati:
+        #    print(f"Studente: {studente}")
+
+        return studente
 
     def MediaDeiVoti(self):
 

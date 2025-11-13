@@ -60,8 +60,6 @@ class SoftwareJson:
     def __init__(self):
         self.id_counter = 0
 
-
-
     def mediaVoti(self):
         reader = mydataobj.JSONManager("data.json")
         data = reader.MediaDeiVoti()
@@ -78,7 +76,6 @@ class SoftwareJson:
         nuovo_studente = stu.Studente(id_counter=id_counter, name=name, age=eta, classroom=classe, pagella=nuovo_pagella)
         writer = mydataobj.JSONManager("data.json")
         writer.insert(nuovo_studente.to_dict())
-
 
     '''
     <summary>
