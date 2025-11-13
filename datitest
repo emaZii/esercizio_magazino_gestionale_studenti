@@ -4,7 +4,7 @@
         "nome": "ema",
         "eta": "33",
         "classe": "4d",
-        "materia": {
+        "Pagella": {
             "id": 1,
             "materia": "",
             "valutazione": 0
@@ -15,7 +15,7 @@
         "nome": "dario",
         "eta": "43",
         "classe": "4d",
-        "materia": {
+        "Pagella": {
             "id": 2,
             "materia": "italiano",
             "valutazione": 6
@@ -26,7 +26,7 @@
         "nome": "carl",
         "eta": "45",
         "classe": "3f",
-        "materia": {
+        "Pagella": {
             "id": 3,
             "materia": "inglese",
             "valutazione": 7

@@ -125,6 +125,7 @@ class SoftwareJson:
         name = input("Scegli nome: ").lower()
         eta = input("Scegli eta: ").lower()
         classe = input("Scegli classe: ").lower()
+
         risposta = input("Adesso vuoi dai il voto dello studente a qualche materia y=si n=no? \n").lower()
         if risposta == "y" or risposta == "s":
             materia = input("Scegli materia: ").lower()

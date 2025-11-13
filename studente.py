@@ -12,10 +12,10 @@ class Studente:
 
     def to_dict(self):
         return {
-            "id": self.id_counter,
+            "id_studente": self.id_counter,
             "nome": self.name,
             "eta": self.age,
             "classe": self.classroom,
-            "materia": self.pg.to_dict(),
+            "Pagella": [ self.pg.to_dict(),]
         }
 

@@ -12,7 +12,7 @@ class Pagella:
 
     def to_dict(self):
         return {
-            "id": self.id_counter,
+            "id_valutazione": self.id_counter,
             "materia": self.materia,
             "valutazione": self.voto
         }

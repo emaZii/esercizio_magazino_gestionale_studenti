@@ -41,6 +41,7 @@ class JSONManager:
             Inserisce un nuovo dato
         </summary>
         """
+
         if os.path.getsize(self.file_path) > 1:
             data = self.read_data()
             data.append(new_entry)
@@ -160,4 +161,4 @@ class JSONManager:
         for studente in data:
             if studente["nome"] == nome_studente:
                 print(f"Studente: {studente}")
-                print(f"Materia: {materia} {studente['valutazione']}")
+                print(f"Pagella: {materia} {studente['valutazione']}")
