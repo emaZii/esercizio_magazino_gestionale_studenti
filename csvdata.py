@@ -46,6 +46,7 @@ class CSVReader:
                 json.dump([], f, ensure_ascii=False, indent=4)
 
         #legge il file csv
+        idcount = 0
         df = pd.read_csv(csv_path, sep=';')
         df.columns.tolist()
         df.columns = df.columns.str.strip().str.lower()
@@ -55,6 +56,7 @@ class CSVReader:
             data = json.load(f)
 
         for index, row in df.iterrows():
+            idcount += 1
             nome = row["nome"]
             eta = row["eta"]
             classe = row["classe"]
@@ -66,13 +68,12 @@ class CSVReader:
                 "classe": classe,
                 "materia":[
                     {
+                        "id_valutazione": idcount,
                         "materia": nome_materia,
                         "valutazione": row[nome_materia]
-                    } for nome_materia in names_materie
+                    }for nome_materia in names_materie
                 ]
             })
-        print(f"I miei dati: {data}")
-
         #salva i dati uniti nel json
         with open(json_path, 'w') as f:
             json.dump(data, f, ensure_ascii=False, indent=4)

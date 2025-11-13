@@ -36,32 +36,24 @@
         "nome": "paolo",
         "eta": 33,
         "classe": "4f",
-        "materia": ""
-    },
-    {
-        "nome": "paolo",
-        "eta": 33,
-        "classe": "4f",
-        "materia": ""
-    },
-    {
-        "nome": "paolo",
-        "eta": 33,
-        "classe": "4f",
         "materia": [
             {
+                "id_valutazione": 1,
                 "materia": "votoinglese",
                 "valutazione": 3
             },
             {
+                "id_valutazione": 1,
                 "materia": "votoitaliano",
                 "valutazione": 6
             },
             {
+                "id_valutazione": 1,
                 "materia": "votomatematica",
                 "valutazione": 8
             },
             {
+                "id_valutazione": 1,
                 "materia": "votofisica",
                 "valutazione": 7
             }
@@ -73,248 +65,22 @@
         "classe": "5f",
         "materia": [
             {
+                "id_valutazione": 2,
                 "materia": "votoinglese",
                 "valutazione": 5
             },
             {
+                "id_valutazione": 2,
                 "materia": "votoitaliano",
                 "valutazione": 4
             },
             {
+                "id_valutazione": 2,
                 "materia": "votomatematica",
                 "valutazione": 6
             },
             {
-                "materia": "votofisica",
-                "valutazione": 5
-            }
-        ]
-    },
-    {
-        "nome": "luca",
-        "eta": 30,
-        "classe": "2f",
-        "materia": [
-            {
-                "materia": "votoinglese",
-                "valutazione": 8
-            },
-            {
-                "materia": "votoitaliano",
-                "valutazione": 8
-            },
-            {
-                "materia": "votomatematica",
-                "valutazione": 2
-            },
-            {
-                "materia": "votofisica",
-                "valutazione": 2
-            }
-        ]
-    },
-    {
-        "nome": "marco",
-        "eta": 36,
-        "classe": "3e",
-        "materia": [
-            {
-                "materia": "votoinglese",
-                "valutazione": 7
-            },
-            {
-                "materia": "votoitaliano",
-                "valutazione": 7
-            },
-            {
-                "materia": "votomatematica",
-                "valutazione": 6
-            },
-            {
-                "materia": "votofisica",
-                "valutazione": 4
-            }
-        ]
-    },
-    {
-        "nome": "giovanni",
-        "eta": 33,
-        "classe": "4f",
-        "materia": [
-            {
-                "materia": "votoinglese",
-                "valutazione": 6
-            },
-            {
-                "materia": "votoitaliano",
-                "valutazione": 6
-            },
-            {
-                "materia": "votomatematica",
-                "valutazione": 7
-            },
-            {
-                "materia": "votofisica",
-                "valutazione": 9
-            }
-        ]
-    },
-    {
-        "nome": "emanuele",
-        "eta": 25,
-        "classe": "5f",
-        "materia": [
-            {
-                "materia": "votoinglese",
-                "valutazione": 4
-            },
-            {
-                "materia": "votoitaliano",
-                "valutazione": 6
-            },
-            {
-                "materia": "votomatematica",
-                "valutazione": 8
-            },
-            {
-                "materia": "votofisica",
-                "valutazione": 5
-            }
-        ]
-    },
-    {
-        "nome": "nicola",
-        "eta": 35,
-        "classe": "5t",
-        "materia": [
-            {
-                "materia": "votoinglese",
-                "valutazione": 6
-            },
-            {
-                "materia": "votoitaliano",
-                "valutazione": 7
-            },
-            {
-                "materia": "votomatematica",
-                "valutazione": 4
-            },
-            {
-                "materia": "votofisica",
-                "valutazione": 7
-            }
-        ]
-    },
-    {
-        "nome": "carmela",
-        "eta": 21,
-        "classe": "2f",
-        "materia": [
-            {
-                "materia": "votoinglese",
-                "valutazione": 6
-            },
-            {
-                "materia": "votoitaliano",
-                "valutazione": 7
-            },
-            {
-                "materia": "votomatematica",
-                "valutazione": 7
-            },
-            {
-                "materia": "votofisica",
-                "valutazione": 6
-            }
-        ]
-    },
-    {
-        "nome": "dario",
-        "eta": 34,
-        "classe": "5t",
-        "materia": [
-            {
-                "materia": "votoinglese",
-                "valutazione": 6
-            },
-            {
-                "materia": "votoitaliano",
-                "valutazione": 8
-            },
-            {
-                "materia": "votomatematica",
-                "valutazione": 6
-            },
-            {
-                "materia": "votofisica",
-                "valutazione": 7
-            }
-        ]
-    },
-    {
-        "nome": "alfio",
-        "eta": 36,
-        "classe": "5t",
-        "materia": [
-            {
-                "materia": "votoinglese",
-                "valutazione": 7
-            },
-            {
-                "materia": "votoitaliano",
-                "valutazione": 4
-            },
-            {
-                "materia": "votomatematica",
-                "valutazione": 5
-            },
-            {
-                "materia": "votofisica",
-                "valutazione": 5
-            }
-        ]
-    },
-    {
-        "nome": "paolo",
-        "eta": 33,
-        "classe": "4f",
-        "materia": [
-            {
-                "materia": "votoinglese",
-                "valutazione": 3
-            },
-            {
-                "materia": "votoitaliano",
-                "valutazione": 6
-            },
-            {
-                "materia": "votomatematica",
-                "valutazione": 8
-            },
-            {
-                "materia": "votofisica",
-                "valutazione": 7
-            }
-        ]
-    },
-    {
-        "nome": "giovanni",
-        "eta": 29,
-        "classe": "5f",
-        "materia": [
-            {
-                "materia": "votoinglese",
-                "valutazione": 5
-            },
-            {
-                "materia": "votoitaliano",
-                "valutazione": 4
-            },
-            {
-                "materia": "votomatematica",
-                "valutazione": 6
-            },
-            {
+                "id_valutazione": 2,
                 "materia": "votofisica",
                 "valutazione": 5
             }
@@ -326,18 +92,22 @@
         "classe": "2f",
         "materia": [
             {
+                "id_valutazione": 3,
                 "materia": "votoinglese",
                 "valutazione": 8
             },
             {
+                "id_valutazione": 3,
                 "materia": "votoitaliano",
                 "valutazione": 8
             },
             {
+                "id_valutazione": 3,
                 "materia": "votomatematica",
                 "valutazione": 2
             },
             {
+                "id_valutazione": 3,
                 "materia": "votofisica",
                 "valutazione": 2
             }
@@ -349,18 +119,22 @@
         "classe": "3e",
         "materia": [
             {
+                "id_valutazione": 4,
                 "materia": "votoinglese",
                 "valutazione": 7
             },
             {
+                "id_valutazione": 4,
                 "materia": "votoitaliano",
                 "valutazione": 7
             },
             {
+                "id_valutazione": 4,
                 "materia": "votomatematica",
                 "valutazione": 6
             },
             {
+                "id_valutazione": 4,
                 "materia": "votofisica",
                 "valutazione": 4
             }
@@ -372,18 +146,22 @@
         "classe": "4f",
         "materia": [
             {
+                "id_valutazione": 5,
                 "materia": "votoinglese",
                 "valutazione": 6
             },
             {
+                "id_valutazione": 5,
                 "materia": "votoitaliano",
                 "valutazione": 6
             },
             {
+                "id_valutazione": 5,
                 "materia": "votomatematica",
                 "valutazione": 7
             },
             {
+                "id_valutazione": 5,
                 "materia": "votofisica",
                 "valutazione": 9
             }
@@ -395,18 +173,22 @@
         "classe": "5f",
         "materia": [
             {
+                "id_valutazione": 6,
                 "materia": "votoinglese",
                 "valutazione": 4
             },
             {
+                "id_valutazione": 6,
                 "materia": "votoitaliano",
                 "valutazione": 6
             },
             {
+                "id_valutazione": 6,
                 "materia": "votomatematica",
                 "valutazione": 8
             },
             {
+                "id_valutazione": 6,
                 "materia": "votofisica",
                 "valutazione": 5
             }
@@ -418,18 +200,22 @@
         "classe": "5t",
         "materia": [
             {
+                "id_valutazione": 7,
                 "materia": "votoinglese",
                 "valutazione": 6
             },
             {
+                "id_valutazione": 7,
                 "materia": "votoitaliano",
                 "valutazione": 7
             },
             {
+                "id_valutazione": 7,
                 "materia": "votomatematica",
                 "valutazione": 4
             },
             {
+                "id_valutazione": 7,
                 "materia": "votofisica",
                 "valutazione": 7
             }
@@ -441,18 +227,22 @@
         "classe": "2f",
         "materia": [
             {
+                "id_valutazione": 8,
                 "materia": "votoinglese",
                 "valutazione": 6
             },
             {
+                "id_valutazione": 8,
                 "materia": "votoitaliano",
                 "valutazione": 7
             },
             {
+                "id_valutazione": 8,
                 "materia": "votomatematica",
                 "valutazione": 7
             },
             {
+                "id_valutazione": 8,
                 "materia": "votofisica",
                 "valutazione": 6
             }
@@ -464,18 +254,22 @@
         "classe": "5t",
         "materia": [
             {
+                "id_valutazione": 9,
                 "materia": "votoinglese",
                 "valutazione": 6
             },
             {
+                "id_valutazione": 9,
                 "materia": "votoitaliano",
                 "valutazione": 8
             },
             {
+                "id_valutazione": 9,
                 "materia": "votomatematica",
                 "valutazione": 6
             },
             {
+                "id_valutazione": 9,
                 "materia": "votofisica",
                 "valutazione": 7
             }
@@ -487,18 +281,22 @@
         "classe": "5t",
         "materia": [
             {
+                "id_valutazione": 10,
                 "materia": "votoinglese",
                 "valutazione": 7
             },
             {
+                "id_valutazione": 10,
                 "materia": "votoitaliano",
                 "valutazione": 4
             },
             {
+                "id_valutazione": 10,
                 "materia": "votomatematica",
                 "valutazione": 5
             },
             {
+                "id_valutazione": 10,
                 "materia": "votofisica",
                 "valutazione": 5
             }
