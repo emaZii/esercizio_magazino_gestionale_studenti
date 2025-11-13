@@ -1,15 +1,13 @@
-[
-    {
-        "id_studente": 2,
-        "nome": "giacomo",
-        "eta": "22",
-        "classe": "4t",
-        "Pagella": [
-            {
-                "id_valutazione": 2,
-                "materia": "fisica",
-                "valutazione": 4
-            }
-        ]
-    }
-]
+{
+    "id_studente": 1,
+    "nome": "ema",
+    "eta": "44",
+    "classe": "6t",
+    "Pagella": [
+        {
+            "id_valutazione": 1,
+            "materia": "italiano",
+            "valutazione": 5
+        }
+    ]
+}

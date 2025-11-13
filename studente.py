@@ -11,6 +11,7 @@ class Studente:
         self.pg = pagella
 
     def to_dict(self):
+
         return {
             "id_studente": self.id_counter,
             "nome": self.name,

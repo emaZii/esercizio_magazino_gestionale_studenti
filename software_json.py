@@ -121,7 +121,7 @@ class SoftwareJson:
     '''
     def SalvaInformazionieStudente(self):
         print("Creazione Studente")
-        self.id_counter += 1
+
         name = input("Scegli nome: ").lower()
         eta = input("Scegli eta: ").lower()
         classe = input("Scegli classe: ").lower()
@@ -132,8 +132,10 @@ class SoftwareJson:
             voto = int(input("Scegli voto tra 1 a 10: "))
             nuova_valutazione = vt.Voto(materia, voto)
             self.caricaStudentiVotieMaterieSulJson(self.id_counter, name, eta, classe, materia, voto)
+            self.id_counter += 1
         elif risposta == "n":
             self.caricaStudentiSulJson(self.id_counter, name, eta, classe)
+            self.id_counter += 1
 
     def caricaStudentiVotieMaterieSulJson(self, id_counter, nome, eta, classroom, materia, voto):
         id_counter += 1
