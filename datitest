@@ -1,35 +1,76 @@
 [
-    {
-        "id": 1,
-        "nome": "ema",
-        "eta": "33",
-        "classe": "4d",
-        "Pagella": {
-            "id": 1,
-            "materia": "",
-            "valutazione": 0
-        }
-    },
-    {
-        "id": 2,
-        "nome": "dario",
-        "eta": "43",
-        "classe": "4d",
-        "Pagella": {
-            "id": 2,
-            "materia": "italiano",
-            "valutazione": 6
-        }
-    },
-    {
-        "id": 3,
-        "nome": "carl",
-        "eta": "45",
-        "classe": "3f",
-        "Pagella": {
-            "id": 3,
-            "materia": "inglese",
-            "valutazione": 7
-        }
-    }
+  {
+    "id": 1,
+    "nome": "ema",
+    "eta": "33",
+    "classe": "4d",
+    "Pagella": [
+      {
+        "id_valutazione": 1,
+        "materia": "Italiano",
+        "valutazione": 3
+      },
+      {
+        "id_valutazione": 2,
+        "materia": "Inglese",
+        "valutazione": 2
+      },
+      {
+        "id_valutazione": 3,
+        "materia": "fisica",
+        "valutazione": 1
+      },
+      {
+        "id_valutazione": 4,
+        "materia": "matematica",
+        "valutazione": 4
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nome": "dario",
+    "eta": "43",
+    "classe": "4d",
+    "Pagella": [
+      {
+        "id_valutazione": 2,
+        "materia": "italiano",
+        "valutazione": 5
+      },
+      {
+        "id_valutazione": 2,
+        "materia": "matematica",
+        "valutazione": 6
+      },
+      {
+        "id_valutazione": 2,
+        "materia": "fisica",
+        "valutazione": 7
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "nome": "carl",
+    "eta": "45",
+    "classe": "3f",
+    "Pagella": [
+      {
+        "id_valutazione": 3,
+        "materia": "inglese",
+        "valutazione": 7
+      },
+      {
+        "id_valutazione": 3,
+        "materia": "matematica",
+        "valutazione": 9
+      },
+      {
+        "id_valutazione": 3,
+        "materia": "italiano",
+        "valutazione": 8
+      }
+    ]
+  }
 ]

@@ -1,5 +1,6 @@
 import json
 import os
+import math
 
 '''
 <Summary>   
@@ -119,40 +120,25 @@ class JSONManager:
         return studente
 
     def MediaDeiVoti(self):
-
+        """
+        <summary>
+            Lista di studenti con nome e voto prendere i tre studenti con la media alta e i tre studenti con la media bassa
+        </summary>
+        """
         data = self.read_data()
-
-        # Lista di studenti con nome e voto
         studenti = []
         somma = 0
-
         for studente in data:
             nome = studente["nome"]
-            voto = studente["valutazione"]
-            studenti.append((nome, voto))
-            somma += voto
-
-        # Calcolo la media
-        media = somma / len(studenti)
-        print("Media dei voti:", round(media, 2))
-
-        #riordina l array dallo studente col voto piu piccolo al piu grande
-        for i in range(len(studenti)):
-            for j in range(i + 1, len(studenti)):
-                if studenti[i][1] > studenti[j][1]:
-                    studenti[i], studenti[j] = studenti[j], studenti[i]
-
-        # Tre studenti con i voti più bassi
-        print("Tre studenti con voti più bassi:")
-        print(studenti[0][0], ":", studenti[0][1])
-        print(studenti[1][0], ":", studenti[1][1])
-        print(studenti[2][0], ":", studenti[2][1])
-
-        # Tre studenti con i voti più alti
-        print("Tre studenti con voti più alti:")
-        print(studenti[-1][0], ":", studenti[-1][1])
-        print(studenti[-2][0], ":", studenti[-2][1])
-        print(studenti[-3][0], ":", studenti[-3][1])
+            voto =[v['valutazione'] for v in studente["Pagella"]]
+            somma = sum(voto)
+            media = math.ceil(somma / len(voto))
+            studenti.append((nome, media))
+        studenti.sort(key=lambda x: x[1])
+        print("🔻 Tre studenti con media più bassa:")
+        print(studenti[:3])
+        print("🔺 Tre studenti con media più alta:")
+        print(studenti[-3:])
 
     def queryStudenteMateria(self,nome_studente, materia):
 

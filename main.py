@@ -74,9 +74,9 @@ def menu_principale_csv():
     tasto = input("Scegli: \n")
     # stampa la media dei voti
     if tasto == "1":
-      nome_materia = input("Scegli la materia scrivendo 'VotoMateria Esempio VotoFisica': \n")
-      media = reader.media_dei_voti(csv_path, nome_materia)
-      print(media)
+        nome_materia = input("Scegli la materia scrivendo 'VotoMateria Esempio VotoFisica': \n")
+        media = reader.media_dei_voti(csv_path, nome_materia)
+        print(media)
     #
     if tasto == "2":
         print("Ecco La Lista dei studenti dal piu grande al piu piccolo")
