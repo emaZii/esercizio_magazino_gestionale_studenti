@@ -37,31 +37,31 @@ def menu_principale_json():
 
     #Crea lo studente sincrono
     if tasto =="1":
-        nuovo_software.SalvaInformazionieStudente()
+        nuovo_software.salva_informazioni_e_studente()
 
     # Assegnare un voto a un studente esistente
     if tasto == "2":
-        nuovo_software.assegnavotoemateria()
+        nuovo_software.assegna_voto_e_materia()
 
     # Stampa lo studente dall'eta piu piccola al piu grande
     if tasto == "3":
-        nuovo_software.printAgeHighAndLow()
+        nuovo_software.print_age_high_and_low()
 
     # Stampa studenti di una classe specifica
     if tasto == "4":
         nuovo_software.queryclasse()
 
     if tasto == "5":
-        nuovo_software.queryStudente_materia()
+        nuovo_software.query_studente_materia()
 
     if tasto == "6":
-        nuovo_software.mediaVoto()
+        nuovo_software.media_voto()
 
     if tasto == "7":
         nuovo_software.cancella_studente()
 
     if tasto == "8":
-        nuovo_software.PrintAllData()
+        nuovo_software.print_all_data()
 
     # Esci dal software
     if tasto == "q" or tasto == "Q":

@@ -42,7 +42,6 @@ class JSONManager:
             Inserisce un nuovo dato
         </summary>
         """
-
         if os.path.getsize(self.file_path) > 1:
             data = self.read_data()
             data.append(new_entry)
@@ -54,7 +53,8 @@ class JSONManager:
     def delete_studente(self, name):
         """
         <summary>
-            Dato il nome dello studente lo cancella
+            Dato il nome dello studente lo cancella,
+            Riscrive tutto il json escludendo lo studente nominato
         </summary>
         """
         data = self.read_data()
@@ -63,20 +63,26 @@ class JSONManager:
 
         self.write_data(data)
 
-    def updatestudentefromname(self, name, materia, voto):
+    def update_studente_from_name(self, name, materia, voto):
+        """
+        <summary>
+            Aggiorna i dati di un specifico studente
+        </summary>
+        """
+
         data = self.read_data()
         updated = False
         for entry in data:
             if entry.get("nome") == name:
                 entry['materia'] = materia
-                entry['valutazione'] = voto
+                entry['Pagella'][0]['valutazione'] = voto
                 updated = True
-                break  # Se vuoi aggiornare solo il primo match
+                break
 
         if updated:
             self.write_data(data)
 
-    def etaYoungOld(self, key):
+    def eta_young_old(self, key):
         """
         <summary>
             Query che accetta 'eta' come chiave, stampa nome ed età ordinati dal più giovane al più anziano.
@@ -100,32 +106,27 @@ class JSONManager:
         return sorted_results
 
 
-    def classespecifica(self, nome_classe):
-
+    def classe_specifica(self, nome_classe):
+        """
+        <summary>
+            Stampa tutti i studenti di una specifica classe
+        </summary>
+        """
         data = self.read_data()
-
-        #studenti_filtrati = []
 
         for studente in data:
             if "classe" in studente and studente["classe"] == nome_classe:
                 print(f"Studente: {studente}")
 
-                #studenti_filtrati.append(studente)
-
-        #for studente in studenti_filtrati:
-        #    print(f"Studente: {studente}")
-
-        return studente
-
-    def MediaDeiVoti(self):
+    def media_dei_voti(self):
         """
         <summary>
-            Lista di studenti con nome e voto prendere i tre studenti con la media alta e i tre studenti con la media bassa
+            Lista di studenti con nome e voto prendere i tre studenti con la media alta
+            e i tre studenti con la media bassa
         </summary>
         """
         data = self.read_data()
         studenti = []
-        somma = 0
         for studente in data:
             nome = studente["nome"]
             voto =[v['valutazione'] for v in studente["Pagella"]]
@@ -138,7 +139,12 @@ class JSONManager:
         print("🔺 Tre studenti con media più alta:")
         print(studenti[-3:])
 
-    def queryStudenteMateria(self,nome_studente, materia):
+    def query_studente_materia(self,nome_studente, materia):
+        """
+        <summary>
+            stampa uno studente
+        </summary>
+        """
 
         data = self.read_data()
 

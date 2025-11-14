@@ -4,7 +4,7 @@
         "nome": "dario",
         "eta": "43",
         "classe": "4d",
-        "Pagella": [
+        "pagella": [
             {
                 "id_valutazione": 2,
                 "materia": "italiano",
@@ -20,14 +20,15 @@
                 "materia": "fisica",
                 "valutazione": 7
             }
-        ]
+        ],
+        "materia": "italiano"
     },
     {
         "id": 3,
         "nome": "carl",
         "eta": "45",
         "classe": "3f",
-        "Pagella": [
+        "pagella": [
             {
                 "id_valutazione": 3,
                 "materia": "inglese",
@@ -50,7 +51,7 @@
         "nome": "giorgio",
         "eta": "33",
         "classe": "4d",
-        "Pagella": [
+        "pagella": [
             {
                 "id_valutazione": 1,
                 "materia": "italiano",
@@ -78,7 +79,7 @@
         "nome": "Luca",
         "eta": "43",
         "classe": "4d",
-        "Pagella": [
+        "pagella": [
             {
                 "id_valutazione": 2,
                 "materia": "italiano",
@@ -101,7 +102,7 @@
         "nome": "andrea",
         "eta": "45",
         "classe": "3f",
-        "Pagella": [
+        "pagella": [
             {
                 "id_valutazione": 3,
                 "materia": "inglese",

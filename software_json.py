@@ -62,7 +62,7 @@ class SoftwareJson:
 
     def mediaVoti(self):
         reader = mydataobj.JSONManager("data.json")
-        data = reader.MediaDeiVoti()
+        data = reader.media_dei_voti()
         print(data)
 
     '''
@@ -82,7 +82,7 @@ class SoftwareJson:
         Stampa tutti i dati che ci sono sul json
     </summary>
     '''
-    def PrintAllData(self):
+    def print_all_data(self):
         global new_data
         print(new_data.read_data())
 
@@ -94,24 +94,24 @@ class SoftwareJson:
     def queryclasse(self):
         global new_data
         string = input("Scegli classe: ")
-        new_data.classespecifica(string)
+        new_data.classe_specifica(string)
     '''
     <summary>
         Query che stampa dallo studente di eta piu piccolo al piu grande
     </summary>
     '''
-    def printAgeHighAndLow(self):
+    def print_age_high_and_low(self):
         global new_data
         print("Ecco la pagella ordinata dal studente piu grande al piccolo")
-        new_data.etaYoungOld("eta")
+        new_data.eta_young_old("eta")
 
     '''
     <summary>
         Fa la media dei voti dei studenti
     </summary>
     '''
-    def mediaVoto(self):
-        new_data.MediaDeiVoti()
+    def media_voto(self):
+        new_data.media_dei_voti()
         print(new_data)
 
     '''
@@ -119,7 +119,7 @@ class SoftwareJson:
        Crea lo studente in modo sincrono
     </summary>
     '''
-    def SalvaInformazionieStudente(self):
+    def salva_informazioni_e_studente(self):
         print("Creazione Studente")
 
         name = input("Scegli nome: ").lower()
@@ -131,13 +131,13 @@ class SoftwareJson:
             materia = input("Scegli materia: ").lower()
             voto = int(input("Scegli voto tra 1 a 10: "))
             nuova_valutazione = vt.Voto(materia, voto)
-            self.caricaStudentiVotieMaterieSulJson(self.id_counter, name, eta, classe, materia, voto)
+            self.carica_studenti_voti_e_materie_sul_json(self.id_counter, name, eta, classe, materia, voto)
             self.id_counter += 1
         elif risposta == "n":
             self.caricaStudentiSulJson(self.id_counter, name, eta, classe)
             self.id_counter += 1
 
-    def caricaStudentiVotieMaterieSulJson(self, id_counter, nome, eta, classroom, materia, voto):
+    def carica_studenti_voti_e_materie_sul_json(self, id_counter, nome, eta, classroom, materia, voto):
         id_counter += 1
         nuovo_pagella = pg.Pagella(id_counter=id_counter, materia=materia, voto=voto)
         nuovo_studente = stu.Studente(id_counter=id_counter, name=nome, age=eta, classroom=classroom,
@@ -149,36 +149,36 @@ class SoftwareJson:
         Assegnare il voto dello studente...
     </summary>
     '''
-    def assegnailvotoallapagella(self):
+    def assegna_il_voto_alla_pagella(self):
         print("Assegan Voto e materia")
         self.id_counter += 1
         materia = input("Scegli materia: ").lower()
         voto = int(input("Scegli voto tra 1 a 10: "))
         nuova_valutazione = vt.Voto(materia, voto)
-        self.caricaStudentiVotieMaterieSulJson(self.id_counter, '', 0, '', materia, voto)
+        self.carica_studenti_voti_e_materie_sul_json(self.id_counter, '', 0, '', materia, voto)
 
     '''
     <summary>
         Query che stampa il voto di una specifica materia di un specifico studente
     </summary>
     '''
-    def queryStudente_materia(self):
+    def query_studente_materia(self):
         nome_studente = input("Scegli nome: ").lower()
         nome_materia = input("Scegli la materia [italiano, matematica, fisica, inglese]: ").lower()
         new_data_obj = mydataobj.JSONManager("data.json")
-        new_data_obj.queryStudenteMateria(nome_studente, nome_materia)
+        new_data_obj.query_studente_materia(nome_studente, nome_materia)
 
     '''
     <summary>
         Assegna il voto dello studente...
     </summary>
     '''
-    def assegnavotoemateria(self):
+    def assegna_voto_e_materia(self):
         new_data_obj = mydataobj.JSONManager("data.json")
         nome = input("Scegli nome: ").lower()
         materia = input("Scegli materia: ").lower()
         voto = int(input("Scegli voto tra 1 a 10: "))
-        new_data_obj.updatestudentefromname(nome,materia, voto)
+        new_data_obj.update_studente_from_name(nome,materia, voto)
 
 
     """

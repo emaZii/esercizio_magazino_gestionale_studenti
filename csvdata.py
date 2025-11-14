@@ -67,7 +67,7 @@ class CSVReader:
                 "nome": nome,
                 "eta": eta,
                 "classe": classe,
-                "Pagella":[
+                "pagella":[
                     {
                         "id_valutazione": idcount,
                         "materia": nome_materia,

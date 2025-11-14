@@ -17,6 +17,6 @@ class Studente:
             "nome": self.name,
             "eta": self.age,
             "classe": self.classroom,
-            "Pagella": [ self.pg.to_dict(),]
+            "pagella": [ self.pg.to_dict(),]
         }
 
