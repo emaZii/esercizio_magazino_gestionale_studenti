@@ -51,6 +51,18 @@ class JSONManager:
             self.write_data(new_entry)
         print("Entry added successfully!")
 
+    def delete_studente(self, name):
+        """
+        <summary>
+            Dato il nome dello studente lo cancella
+        </summary>
+        """
+        data = self.read_data()
+
+        data = [studente for studente in data if studente["nome"] != name]
+
+        self.write_data(data)
+
     def updatestudentefromname(self, name, materia, voto):
         data = self.read_data()
         updated = False
@@ -63,20 +75,6 @@ class JSONManager:
 
         if updated:
             self.write_data(data)
-
-    def delete(self, key, value):
-        """
-        <summary>
-            Cancella i dati che combaciano a chiave e valore.
-        </summary>
-        """
-        data = self.read_data()
-        updated_data = [entry for entry in data if entry.get(key) != value]
-        if len(data) != len(updated_data):
-            self.write_data(updated_data)
-            print("Entry deleted successfully!")
-        else:
-            print("Entry not found!")
 
     def etaYoungOld(self, key):
         """

@@ -180,3 +180,15 @@ class SoftwareJson:
         voto = int(input("Scegli voto tra 1 a 10: "))
         new_data_obj.updatestudentefromname(nome,materia, voto)
 
+
+    """
+    <summary>
+      cancellare un studente specifico
+    </summary>
+    """
+    def cancella_studente(self):
+        new_data_obj = mydataobj.JSONManager("data.json")
+        nome = input("Scegli nome dello studente da cancellare: ").lower()
+        new_data_obj.delete_studente(nome)
+        print(f"{nome} cancellato")
+

@@ -58,6 +58,9 @@ def menu_principale_json():
         nuovo_software.mediaVoto()
 
     if tasto == "7":
+        nuovo_software.cancella_studente()
+
+    if tasto == "8":
         nuovo_software.PrintAllData()
 
     # Esci dal software
@@ -107,7 +110,8 @@ def comandi_text_json():
     print("-4 Stampa una classe specifica")
     print("-5 Stampa un voto di una materia di uno studente")
     print("-6 Stampa la media dei Voti")
-    print("-7 Stampa tutti i studenti")
+    print("-7 Cancella un studente specifico")
+    print("-8 Stampa tutti i studenti")
     print("'Q'or'q'(quit) per uscire dal software")
 
 def comandi_text_csv():
